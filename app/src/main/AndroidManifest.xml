@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lifecycle.Lifecycle1Activity" />
+        <activity android:name=".lifecycle.Lifecycle2Activity"></activity>
     </application>
 
 </manifest>
