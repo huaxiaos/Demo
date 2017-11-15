@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.huaxiao.demo.lifecycle.Lifecycle1Activity;
+import com.huaxiao.demo.scan.ScanActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                Intent intent = new Intent(this, Lifecycle1Activity.class);
+                Intent intent = new Intent(this, ScanActivity.class);
                 startActivity(intent);
                 break;
 
