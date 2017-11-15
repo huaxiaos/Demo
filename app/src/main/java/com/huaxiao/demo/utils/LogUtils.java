@@ -1,4 +1,4 @@
-package com.huaxiao.demo.helper;
+package com.huaxiao.demo.utils;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import android.util.Log;
  * Created by huaxiao on 17/10/9.
  */
 
-public class LogHelper {
+public class LogUtils {
 
     private static final String TAG = "huaxiao";
 

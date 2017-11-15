@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.huaxiao.demo.R;
-import com.huaxiao.demo.helper.LogHelper;
+import com.huaxiao.demo.utils.LogUtils;
 
 public class Lifecycle2Activity extends AppCompatActivity {
 
@@ -13,42 +13,42 @@ public class Lifecycle2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lifecycle2);
 
-        LogHelper.e("2 onCreate");
+        LogUtils.e("2 onCreate");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        LogHelper.e("2 onRestart");
+        LogUtils.e("2 onRestart");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        LogHelper.e("2 onStart");
+        LogUtils.e("2 onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LogHelper.e("2 onResume");
+        LogUtils.e("2 onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LogHelper.e("2 onPause");
+        LogUtils.e("2 onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogHelper.e("2 onStop");
+        LogUtils.e("2 onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogHelper.e("2 onDestory");
+        LogUtils.e("2 onDestory");
     }
 }

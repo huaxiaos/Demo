@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.demo.R;
-import com.huaxiao.demo.helper.LogHelper;
+import com.huaxiao.demo.utils.LogUtils;
 
 public class Lifecycle1Activity extends AppCompatActivity {
 
@@ -25,42 +25,42 @@ public class Lifecycle1Activity extends AppCompatActivity {
             }
         });
 
-        LogHelper.e("1 onCreate");
+        LogUtils.e("1 onCreate");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        LogHelper.e("1 onRestart");
+        LogUtils.e("1 onRestart");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        LogHelper.e("1 onStart");
+        LogUtils.e("1 onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LogHelper.e("1 onResume");
+        LogUtils.e("1 onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        LogHelper.e("1 onPause");
+        LogUtils.e("1 onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogHelper.e("1 onStop");
+        LogUtils.e("1 onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogHelper.e("1 onDestory");
+        LogUtils.e("1 onDestory");
     }
 }
