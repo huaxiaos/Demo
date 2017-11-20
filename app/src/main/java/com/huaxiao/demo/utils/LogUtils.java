@@ -2,6 +2,8 @@ package com.huaxiao.demo.utils;
 
 import android.util.Log;
 
+import com.huaxiao.demo.BuildConfig;
+
 /**
  * Created by huaxiao on 17/10/9.
  */
@@ -12,6 +14,7 @@ public class LogUtils {
     private static volatile LogUtils mInstance;
     private long mTimeStart;
     private long mTimeEnd;
+    private static final boolean debug = BuildConfig.DEBUG;
 
     public static LogUtils getInstance() {
         if (mInstance == null) {
@@ -31,6 +34,16 @@ public class LogUtils {
 
     public static void e(String msg) {
         Log.e(TAG, msg);
+    }
+
+    public static void d(String msg) {
+        d(TAG, msg);
+    }
+
+    public static void d(String tag, String msg) {
+        if (debug) {
+            Log.d(tag, msg);
+        }
     }
 
     public void timeStart() {
