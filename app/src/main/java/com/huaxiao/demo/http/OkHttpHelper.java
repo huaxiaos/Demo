@@ -62,7 +62,7 @@ public class OkHttpHelper {
                     }
                 };
 
-        OkHttpClient client = new OkHttpClient.Builder()
+        OkHttpClient client = getInstance().newBuilder()
                 .addNetworkInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
