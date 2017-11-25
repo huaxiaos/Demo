@@ -33,4 +33,5 @@ dependencies {
     compile 'io.haydar.filescanner:filescannercore:1.1'
     compile 'com.squareup.okhttp3:okhttp:3.9.1'
     compile 'com.alibaba:fastjson:1.2.41'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
 }
