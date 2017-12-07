@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.huaxiao.demo.bitmap.Bitmap1Activity;
 import com.huaxiao.demo.scan.Scan2Activity;
 import com.huaxiao.demo.scan.Scan3Activity;
 import com.huaxiao.demo.scan.ScanActivity;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                Intent intent = new Intent(this, Scan3Activity.class);
+                Intent intent = new Intent(this, Bitmap1Activity.class);
                 startActivity(intent);
                 break;
 
