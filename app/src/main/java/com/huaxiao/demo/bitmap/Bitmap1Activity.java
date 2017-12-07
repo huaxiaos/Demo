@@ -33,10 +33,6 @@ public class Bitmap1Activity extends AppCompatActivity {
                 LogUtils.d(TAG, (System.currentTimeMillis() - a) + "");
             }
         });
-
-//        Bitmap bitmap2 = getBitmapByView(image1);
-
-        LogUtils.d("111");
     }
 
     public static Bitmap getBitmapByView(View view) {
