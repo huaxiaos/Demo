@@ -1,6 +1,7 @@
 package com.huaxiao.demo.utils;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 
@@ -71,5 +72,15 @@ public class SystemUtils {
             return tm.getDeviceId();
         }
         return null;
+    }
+
+    /**
+     * 获取蓝牙设备的名称，也就是系统设置那边显示的手机名称，如小米手机，用户可以自己修改
+     *
+     * @return 蓝牙设备名称
+     */
+    public static String getBluetoothName() {
+        BluetoothAdapter defaultAdapter = BluetoothAdapter.getDefaultAdapter();
+        return defaultAdapter.getName();
     }
 }
