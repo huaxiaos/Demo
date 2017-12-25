@@ -10,7 +10,7 @@ import java.util.List;
  * Date 2017/11/7
  */
 
-public class GsonUtils {
+public class JsonUtils {
 
     public static <T> T parseObject(String text, Class<T> clazz) {
         return JSON.parseObject(text, clazz);
