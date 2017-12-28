@@ -20,4 +20,13 @@ public class NetworkUtils {
         return networkInfo != null && networkInfo.isConnected() && ConnectivityManager.TYPE_WIFI == networkInfo.getType();
     }
 
+    public static boolean isConnected(Context context) {
+        ConnectivityManager connectivityManager =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager == null) return false;
+
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }
