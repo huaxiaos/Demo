@@ -1,5 +1,7 @@
 package com.huaxiao.demo.http;
 
+import android.text.TextUtils;
+
 import com.huaxiao.demo.utils.LogUtils;
 
 import java.io.File;
@@ -50,6 +52,11 @@ public class OkHttpHelper {
                                     final String fileDir,
                                     final String fileName,
                                     final ProgressListener listener) {
+        if (TextUtils.isEmpty(url)) {
+            listener.onFailure("url is empty");
+            return;
+        }
+
         Request request = new Request.Builder()
                 .url(url)
                 .build();
