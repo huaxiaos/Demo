@@ -10,6 +10,7 @@ import com.huaxiao.demo.bitmap.Bitmap1Activity;
 import com.huaxiao.demo.scan.Scan2Activity;
 import com.huaxiao.demo.scan.Scan3Activity;
 import com.huaxiao.demo.scan.ScanActivity;
+import com.huaxiao.demo.spider.SpiderActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                Intent intent = new Intent(this, Bitmap1Activity.class);
+                Intent intent = new Intent(this, SpiderActivity.class);
                 startActivity(intent);
                 break;
 

@@ -46,6 +46,12 @@ public class LogUtils {
         }
     }
 
+    public static void i(String tag, String msg) {
+        if (debug) {
+            Log.i(tag, msg);
+        }
+    }
+
     public void timeStart() {
         mTimeStart = System.currentTimeMillis();
         e(mTimeStart + "");
