@@ -12,6 +12,7 @@ public class SpiderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spider);
 
-        SpiderPYX.start();
+//        SpiderPYX.start();
+        SpiderLocalFile.start();
     }
 }
