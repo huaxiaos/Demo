@@ -35,7 +35,8 @@
         <activity android:name=".scan.Scan2Activity" />
         <activity android:name=".scan.Scan3Activity" />
         <activity android:name=".bitmap.Bitmap1Activity" />
-        <activity android:name=".spider.SpiderActivity"></activity>
+        <activity android:name=".spider.SpiderActivity" />
+        <activity android:name=".mvvm.MVVMActivity"></activity>
     </application>
 
 </manifest>
