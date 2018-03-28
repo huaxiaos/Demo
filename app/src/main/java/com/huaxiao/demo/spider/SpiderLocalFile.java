@@ -26,9 +26,8 @@ public class SpiderLocalFile {
         public Data data;
 
         public static class Data {
-            public String film_url;
+            public String video_url;
             public String title;
-            public String channel_name;
             public String img_url;
         }
     }
@@ -85,31 +84,27 @@ public class SpiderLocalFile {
                     LogUtils.i(TAG, "f name " + f.getName());
                     String fileName = f.getName();
                     String channelName = "";
-                    if (fileName.contains("zx")) {
-                        channelName = "最新";
-                    } else if (fileName.contains("ys")) {
-                        channelName = "影视";
-                    } else if (fileName.contains("zy")) {
-                        channelName = "综艺";
-                    } else if (fileName.contains("bg")) {
-                        channelName = "八卦";
+                    if (fileName.contains("jbp")) {
+                        channelName = "剧本配";
+                    } else if (fileName.contains("dm")) {
+                        channelName = "动漫";
+                    } else if (fileName.contains("gf")) {
+                        channelName = "古风";
+                    } else if (fileName.contains("hzq")) {
+                        channelName = "合作区";
+                    } else if (fileName.contains("mf")) {
+                        channelName = "模仿";
                     }
 
                     String json = FileUtils.readSDFile(f);
-                    KKData kkData = JsonUtils.parseObject(json, KKData.class);
-                    List<KKData.TimelineData> timelineList = kkData.data.timeline;
+                    PYXData pyxData = JsonUtils.parseObject(json, PYXData.class);
 
-                    for (KKData.TimelineData data : timelineList) {
-                        List<KKData.FragmentData> fragmentList = data.theme.fragment;
-                        KKData.FragmentData fragmentData = fragmentList.get(0);
-
-                        TargetData targetData = new TargetData();
-                        targetData.channel_name = channelName;
-                        targetData.film_url = fragmentData.video;
-                        targetData.img_url = data.theme.cover_url;
-                        targetData.title = data.theme.name;
-                        datas.add(targetData);
-                    }
+                    TargetData targetData = new TargetData();
+                    targetData.title = pyxData.data.title;
+                    targetData.img_url = pyxData.data.img_url;
+                    targetData.film_url = pyxData.data.video_url;
+                    targetData.channel_name = channelName;
+                    datas.add(targetData);
                 }
 
                 String target = JsonUtils.parseObject(datas);
