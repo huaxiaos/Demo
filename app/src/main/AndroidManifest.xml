@@ -36,7 +36,8 @@
         <activity android:name=".scan.Scan3Activity" />
         <activity android:name=".bitmap.Bitmap1Activity" />
         <activity android:name=".spider.SpiderActivity" />
-        <activity android:name=".mvvm.MVVMActivity"></activity>
+        <activity android:name=".mvvm.MVVMActivity" />
+        <activity android:name=".leetcode.LeetCodeActivity"></activity>
     </application>
 
 </manifest>

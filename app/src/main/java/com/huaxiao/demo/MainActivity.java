@@ -6,13 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.bitmap.Bitmap1Activity;
 import com.huaxiao.demo.scan.Scan2Activity;
 import com.huaxiao.demo.scan.Scan3Activity;
 import com.huaxiao.demo.scan.ScanActivity;
 import com.huaxiao.demo.spider.SpiderActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
