@@ -1,4 +1,4 @@
-package com.huaxiao.demo.leetcode;
+package com.huaxiao.demo.leetcode.array;
 
 /**
  * Description
