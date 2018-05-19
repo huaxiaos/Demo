@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.huaxiao.demo.annotation.AnnotationDemo;
 import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.bitmap.Bitmap1Activity;
 import com.huaxiao.demo.scan.Scan2Activity;
@@ -28,8 +29,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                Intent intent = new Intent(this, SpiderActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this, SpiderActivity.class);
+//                startActivity(intent);
+                new AnnotationDemo().start();
                 break;
 
             default:
