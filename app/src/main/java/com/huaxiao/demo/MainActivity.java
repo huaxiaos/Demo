@@ -9,6 +9,8 @@ import android.widget.Button;
 import com.huaxiao.demo.annotation.AnnotationDemo;
 import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.bitmap.Bitmap1Activity;
+import com.huaxiao.demo.classloader.ClassLoader;
+import com.huaxiao.demo.handler.HandlerTestActivity;
 import com.huaxiao.demo.java.SynchronizedDemo;
 import com.huaxiao.demo.scan.Scan2Activity;
 import com.huaxiao.demo.scan.Scan3Activity;
@@ -30,9 +32,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-//                Intent intent = new Intent(this, SpiderActivity.class);
-//                startActivity(intent);
-                SynchronizedDemo.test1();
+                Intent intent = new Intent(this, HandlerTestActivity.class);
+                startActivity(intent);
+//                ClassLoader.main(null);
                 break;
 
             default:

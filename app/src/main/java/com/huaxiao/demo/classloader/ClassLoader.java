@@ -9,8 +9,7 @@ package com.huaxiao.demo.classloader;
 public class ClassLoader {
 
     public static void main(String[] args) {
-        System.out.println(FinalTest.NUM);
-        System.out.println(FinalTest1.NUM);
+        new B();
     }
 
     static class FinalTest {
@@ -26,6 +25,32 @@ public class ClassLoader {
 
         static {
             System.out.println("hello1");
+        }
+    }
+
+    static class A {
+        static {
+            System.out.println("A1");
+        }
+        {
+            System.out.println("A2");
+        }
+
+        public A() {
+            System.out.println("A3");
+        }
+    }
+
+    static class B extends A {
+        static {
+            System.out.println("B1");
+        }
+        {
+            System.out.println("B2");
+        }
+
+        public B() {
+            System.out.println("B3");
         }
     }
 
