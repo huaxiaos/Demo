@@ -1,6 +1,7 @@
 package com.huaxiao.demo.utils;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
@@ -10,9 +11,12 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.request.transition.Transition;
 
 import java.io.File;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Description 图片工具类
@@ -56,10 +60,11 @@ public class ImageUtils {
 
     /**
      * 该方法中url可以是下载链接，不需要已.png结尾
-     * @param context Context
-     * @param url url
+     *
+     * @param context   Context
+     * @param url       url
      * @param imageView imageView
-     * @param errorImg errorImg
+     * @param errorImg  errorImg
      */
     public static void displayImgByDownload(Context context, String url, final ImageView imageView, final int errorImg) {
         RequestOptions options = new RequestOptions();
@@ -69,6 +74,33 @@ public class ImageUtils {
                 .load(url)
                 .apply(options)
                 .into(imageView);
+    }
+
+    /**
+     * 重置图片大小
+     *
+     * @param context Context
+     * @param url     url
+     * @param width   target width
+     * @param height  target height
+     * @return Bitmap
+     * <p>
+     * 需要注意的是fitCenter属性，如果没有这个属性，则只能按照缩放至原有大小的1/2
+     * 并且不能支持全部的尺寸
+     */
+    public static Bitmap resize(Context context, String url, int width, int height) {
+        try {
+            RequestOptions options = new RequestOptions();
+            options.fitCenter();
+
+            return Glide.with(context).asBitmap().load(url).apply(options).submit(width, height).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
 }
