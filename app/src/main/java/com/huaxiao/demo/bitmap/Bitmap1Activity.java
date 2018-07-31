@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.huaxiao.demo.R;
+import com.huaxiao.demo.helper.ThreadHelper;
+import com.huaxiao.demo.utils.ImageUtils;
 import com.huaxiao.demo.utils.LogUtils;
 
 public class Bitmap1Activity extends AppCompatActivity {
@@ -21,16 +23,19 @@ public class Bitmap1Activity extends AppCompatActivity {
 
         final ImageView image1 = (ImageView) findViewById(R.id.image1);
 
+        final String url = "";
+        final int size = 40;
 
-        image1.post(new Runnable() {
+        ThreadHelper.getInstance().getGlobalThreadPool().execute(new Runnable() {
             @Override
             public void run() {
+                Bitmap bitmap = ImageUtils.resize(Bitmap1Activity.this, url, size, size);
 
-                long a = System.currentTimeMillis();
-
-                Bitmap bitmap1 = test(image1);
-
-                LogUtils.d(TAG, (System.currentTimeMillis() - a) + "");
+                if (bitmap == null) {
+                    LogUtils.i("resize", "bitmap is null");
+                } else {
+                    LogUtils.i("resize", "width " + bitmap.getWidth() + " height " + bitmap.getHeight());
+                }
             }
         });
     }
