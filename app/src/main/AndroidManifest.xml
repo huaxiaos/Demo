@@ -38,7 +38,8 @@
         <activity android:name=".spider.SpiderActivity" />
         <activity android:name=".mvvm.MVVMActivity" />
         <activity android:name=".leetcode.LeetCodeActivity" />
-        <activity android:name=".handler.HandlerTestActivity"></activity>
+        <activity android:name=".handler.HandlerTestActivity" />
+        <activity android:name=".proxy.ProxyDemoActivity"></activity>
     </application>
 
 </manifest>

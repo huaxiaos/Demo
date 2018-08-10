@@ -12,6 +12,7 @@ import com.huaxiao.demo.bitmap.Bitmap1Activity;
 import com.huaxiao.demo.classloader.ClassLoader;
 import com.huaxiao.demo.handler.HandlerTestActivity;
 import com.huaxiao.demo.java.SynchronizedDemo;
+import com.huaxiao.demo.proxy.ProxyDemoActivity;
 import com.huaxiao.demo.scan.Scan2Activity;
 import com.huaxiao.demo.scan.Scan3Activity;
 import com.huaxiao.demo.scan.ScanActivity;
@@ -32,7 +33,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                Intent intent = new Intent(this, HandlerTestActivity.class);
+                Intent intent = new Intent(this, ProxyDemoActivity.class);
                 startActivity(intent);
 //                ClassLoader.main(null);
                 break;
