@@ -3,6 +3,8 @@ package com.huaxiao.demo.aspectj;
 import com.huaxiao.demo.utils.LogUtils;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -15,14 +17,24 @@ public class MethodAspect {
 
     private static final String TAG = "MethodAspect";
 
-    @Pointcut("call(* com.huaxiao.demo.aspectj.AspectJ1.run(..))")
-    public void callMethod() {
+//    @Pointcut("call(* com.huaxiao.demo.aspectj.AspectJ1.run(..))")
+//    public void callMethod() {
+//
+//    }
 
-    }
+//    @Before("callMethod()")
+//    public void beforCallMethod(JoinPoint joinPoint) {
+//        LogUtils.i(TAG, "before->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+//    }
 
-    @Before("callMethod()")
-    public void beforCallMethod(JoinPoint joinPoint) {
-        LogUtils.i(TAG, "before->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+    @Around("call(* com.huaxiao.demo.aspectj.AspectJ1.run(..))")
+    public void aroundCallMethod(ProceedingJoinPoint joinPoint) {
+        LogUtils.i(TAG, "around->" + joinPoint.getTarget().toString() + "#" + joinPoint.getSignature().getName());
+//        try {
+//            joinPoint.proceed();
+//        } catch (Throwable throwable) {
+//            throwable.printStackTrace();
+//        }
     }
 
 }
