@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.demo.annotation.AnnotationDemo;
+import com.huaxiao.demo.aspectj.AspectJ1;
 import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.bitmap.Bitmap1Activity;
 import com.huaxiao.demo.classloader.ClassLoader;
@@ -33,9 +34,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                Intent intent = new Intent(this, ProxyDemoActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(this, ProxyDemoActivity.class);
+//                startActivity(intent);
 //                ClassLoader.main(null);
+
+                AspectJ1 aspectJ1 = new AspectJ1();
+                aspectJ1.run();
+
                 break;
 
             default:

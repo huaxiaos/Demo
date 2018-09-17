@@ -32,6 +32,10 @@ public class LogUtils {
 
     }
 
+    public static void i(String msg) {
+        i(TAG, msg);
+    }
+
     public static void e(String msg) {
         Log.e(TAG, msg);
     }
