@@ -36,10 +36,27 @@
         <activity android:name=".scan.Scan3Activity" />
         <activity android:name=".bitmap.Bitmap1Activity" />
         <activity android:name=".spider.SpiderActivity" />
-        <activity android:name=".mvvm.MVVMActivity" />
+        <activity
+            android:name=".mvvm.MVVMActivity"
+            android:process=":remote"/>
         <activity android:name=".leetcode.LeetCodeActivity" />
         <activity android:name=".handler.HandlerTestActivity" />
         <activity android:name=".proxy.ProxyDemoActivity"></activity>
+
+        <receiver
+            android:name=".broadcast.DemoBroadcastReceiver"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.huaxiao.demo.test" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.DemoService"
+            android:process=":remote"
+            android:exported="true">
+
+        </service>
     </application>
 
 </manifest>
