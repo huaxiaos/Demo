@@ -19,6 +19,7 @@ import com.huaxiao.demo.scan.Scan2Activity;
 import com.huaxiao.demo.scan.Scan3Activity;
 import com.huaxiao.demo.scan.ScanActivity;
 import com.huaxiao.demo.service.DemoService;
+import com.huaxiao.demo.spi.SPIDemo;
 import com.huaxiao.demo.spider.SpiderActivity;
 
 import static android.content.Intent.FLAG_INCLUDE_STOPPED_PACKAGES;
@@ -57,9 +58,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
 
             case R.id.button2:
-                intent = new Intent();
-                intent.setAction("com.huaxiao.demo.test");
-                sendBroadcast(intent);
+//                intent = new Intent();
+//                intent.setAction("com.huaxiao.demo.test");
+//                sendBroadcast(intent);
+
+                SPIDemo.run();
+
                 break;
 
             default:
