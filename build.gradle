@@ -30,3 +30,16 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+class DemoPlugin implements Plugin<Project> {
+    void apply(Project project) {
+        project.task('hello') {
+            doLast {
+                println 'Hello from the DemoPlugin'
+            }
+        }
+    }
+}
+
+// Apply the plugin
+apply plugin: DemoPlugin
