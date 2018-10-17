@@ -38,10 +38,10 @@
         <activity android:name=".spider.SpiderActivity" />
         <activity
             android:name=".mvvm.MVVMActivity"
-            android:process=":remote"/>
+            android:process=":remote" />
         <activity android:name=".leetcode.LeetCodeActivity" />
         <activity android:name=".handler.HandlerTestActivity" />
-        <activity android:name=".proxy.ProxyDemoActivity"></activity>
+        <activity android:name=".proxy.ProxyDemoActivity" />
 
         <receiver
             android:name=".broadcast.DemoBroadcastReceiver"
@@ -53,10 +53,10 @@
 
         <service
             android:name=".service.DemoService"
-            android:process=":remote"
-            android:exported="true">
+            android:exported="true"
+            android:process=":remote"></service>
 
-        </service>
+        <activity android:name=".fragment.FragmentDemoActivity"></activity>
     </application>
 
 </manifest>
