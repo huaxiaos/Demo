@@ -5,6 +5,8 @@ import android.app.Application;
 import android.os.Bundle;
 
 import com.huaxiao.demo.utils.LogUtils;
+import com.tencent.android.tpush.XGIOperateCallback;
+import com.tencent.android.tpush.XGPushManager;
 
 /**
  * Created by sunhuaxiao on 2018/9/13.
@@ -16,7 +18,17 @@ public class DemoApplication extends Application implements Application.Activity
     @Override
     public void onCreate() {
         super.onCreate();
+        XGPushManager.registerPush(this, new XGIOperateCallback() {
+            @Override
+            public void onSuccess(Object o, int i) {
+                LogUtils.i(TAG, "XG token-->" + o);
+            }
 
+            @Override
+            public void onFail(Object o, int i, String s) {
+                LogUtils.i(TAG, "XG fail errCode--> " + i + " errMsg--> " + s);
+            }
+        });
     }
 
     @Override
