@@ -10,7 +10,7 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
                 XG_ACCESS_ID : "2100314530",
@@ -28,35 +28,35 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    compile 'org.greenrobot:eventbus:3.1.1'
-    compile 'io.haydar.filescanner:filescannercore:1.1'
-    compile 'com.squareup.okhttp3:okhttp:3.9.1'
-    compile 'com.alibaba:fastjson:1.2.41'
-    compile 'com.github.bumptech.glide:glide:4.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+//    testCompile 'junit:junit:4.12'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'io.haydar.filescanner:filescannercore:1.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.alibaba:fastjson:1.2.41'
+    implementation 'com.github.bumptech.glide:glide:4.0.0'
     //    compile 'com.airbnb.android:lottie:2.3.2-SNAPSHOT'
     //For Lifecycles, LiveData, and ViewModel, add:
-    compile 'android.arch.lifecycle:runtime:1.1.1'
-    compile 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.lifecycle:runtime:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
     implementation project(':smartspi')
     implementation project(':module_a')
     implementation project(':module_b')
 
     //信鸽jar，不包含厂商通道
-    implementation  'com.tencent.xinge:xinge:4.0.3-release'
+    implementation 'com.tencent.xinge:xinge:4.0.3-release'
     //compile'com.tencent.xinge:xinge:4.2.0-beta'
     //信鸽jar，包含厂商通道
 //    compile 'com.tencent.xinge:xinge:4.0.3-otherpush-release'
     //compile 'com.tencent.xinge:xinge:4.2.0-otherpush-beta'
     //jg包
-    implementation'com.tencent.jg:jg:1.1'
+    implementation 'com.tencent.jg:jg:1.1'
     //wup包
     implementation 'com.tencent.wup:wup:1.0.0.E-release'
     //mid包
