@@ -1,2 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.huaxiao.smartmock" />
+    package="com.huaxiao.smartmock">
+
+    <application>
+        <activity android:name=".SmartMockActivity"></activity>
+    </application>
+
+</manifest>

@@ -33,7 +33,7 @@ dependencies {
 //        exclude group: 'com.android.support', module: 'support-annotations'
 //    })
     implementation APPCOMPAT_V7_VERSION
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation CONSTRAINT_LAYOUT_VERSION
 //    testCompile 'junit:junit:4.12'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'io.haydar.filescanner:filescannercore:1.1'

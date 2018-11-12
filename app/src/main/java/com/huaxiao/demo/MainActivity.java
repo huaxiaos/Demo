@@ -10,6 +10,7 @@ import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.exception.DemoException;
 import com.huaxiao.demo.fragment.FragmentDemoActivity;
 import com.huaxiao.demo.spi.SPIDemo;
+import com.huaxiao.smartmock.SmartMockActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -34,10 +35,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //                    t.printStackTrace();
 //                }
 
-                Intent intent = new Intent();
-                intent.setComponent(new ComponentName("pkg name",
-                        "service name"));
-                startService(intent);
+//                Intent intent = new Intent();
+//                intent.setComponent(new ComponentName("pkg name",
+//                        "service name"));
+//                startService(intent);
+
+                startActivity(new Intent(this, SmartMockActivity.class));
 
                 break;
 

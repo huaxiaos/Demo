@@ -34,6 +34,7 @@ allprojects {
         TARGET_SDK_VERSION = 21
 
         APPCOMPAT_V7_VERSION = 'com.android.support:appcompat-v7:26.1.0'
+        CONSTRAINT_LAYOUT_VERSION = 'com.android.support.constraint:constraint-layout:1.0.2'
     }
 }
 
