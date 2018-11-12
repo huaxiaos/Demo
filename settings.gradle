@@ -1,1 +1,1 @@
-include ':app', ':smartspi', ':module_a', ':module_b'
+include ':app', ':smartspi', ':module_a', ':module_b', ':smartmock'
