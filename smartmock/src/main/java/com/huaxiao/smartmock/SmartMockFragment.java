@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.huaxiao.smartmock.holder.KeyValueViewHolder;
+import com.huaxiao.smartmock.holder.ResponseViewHolder;
 import com.huaxiao.smartmock.holder.UrlViewHolder;
 import com.huaxiao.smartmock.model.TreeNode;
 import com.huaxiao.smartmock.view.AndroidTreeView;
@@ -25,15 +27,28 @@ public class SmartMockFragment extends Fragment {
         ViewGroup treeContainer = rootView.findViewById(R.id.sm_tree_container);
 
         TreeNode root = TreeNode.root();
+
         TreeNode urlRoot = new TreeNode("url");
+        urlRoot.setViewHolder(new UrlViewHolder(getActivity()));
+
         TreeNode responseRoot = new TreeNode("response");
+        responseRoot.setViewHolder(new ResponseViewHolder(getActivity()));
+
+//        for (int i = 0; i < 6; i++) {
+//            TreeNode kvRoot = new TreeNode("kv" + i);
+//            kvRoot.setViewHolder(new KeyValueViewHolder(getActivity()));
+//            responseRoot.addChild(kvRoot);
+//        }
 
         urlRoot.addChildren(responseRoot);
+
         root.addChildren(urlRoot);
 
         AndroidTreeView treeView = new AndroidTreeView(getActivity(), root);
-        treeView.setDefaultViewHolder(UrlViewHolder.class);
         treeContainer.addView(treeView.getView());
+
+        treeView.setUseAutoToggle(false);
+        treeView.expandAll();
 
         return rootView;
     }
