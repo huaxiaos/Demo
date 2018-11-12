@@ -1,5 +1,6 @@
 package com.huaxiao.demo;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -27,11 +28,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                try {
-                    DemoException.run();
-                } catch (Exception t) {
-                    t.printStackTrace();
-                }
+//                try {
+//                    DemoException.run();
+//                } catch (Exception t) {
+//                    t.printStackTrace();
+//                }
+
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName("pkg name",
+                        "service name"));
+                startService(intent);
 
                 break;
 
