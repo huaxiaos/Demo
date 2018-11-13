@@ -4,33 +4,26 @@
     android:layout_height="wrap_content"
     android:minHeight="48dp">
 
+    <Button
+        android:id="@+id/btn_sm_kv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="action" />
+
     <EditText
         android:id="@+id/et_sm_response_key"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/btn_sm_kv_action"
         android:hint="key"
         android:minWidth="100dp" />
 
     <EditText
         android:id="@+id/et_sm_response_value"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/et_sm_response_key"
         android:hint="value"
         android:minWidth="100dp" />
-
-    <Button
-        android:id="@+id/btn_sm_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/et_sm_response_value"
-        android:text="change" />
-
-    <Button
-        android:id="@+id/btn_sm_kv_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/btn_sm_status"
-        android:text="delete" />
 
 </RelativeLayout>

@@ -5,22 +5,14 @@
     android:minHeight="48dp">
 
     <Button
-        android:id="@+id/sm_maplocal"
+        android:id="@+id/btn_sm_url_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MapLocal" />
-
-    <Button
-        android:id="@+id/sm_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:text="delete" />
+        android:text="action" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toLeftOf="@id/sm_delete"
-        android:layout_toRightOf="@id/sm_maplocal" />
+        android:layout_toEndOf="@id/btn_sm_url_action" />
 
 </RelativeLayout>

@@ -45,6 +45,7 @@ public class SmartMockFragment extends Fragment {
         root.addChildren(urlRoot);
 
         AndroidTreeView treeView = new AndroidTreeView(getActivity(), root);
+        treeView.setDefaultContainerStyle(R.style.TreeNodeStyle);
         treeContainer.addView(treeView.getView());
 
         treeView.setUseAutoToggle(false);

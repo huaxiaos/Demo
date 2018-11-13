@@ -25,27 +25,6 @@ public class KeyValueViewHolder extends TreeNode.BaseNodeViewHolder<Object> {
     public View createNodeView(final TreeNode node, Object value) {
         View rootView = LayoutInflater.from(context).inflate(R.layout.view_key_value_tree_node, null);
 
-        Button btnStatus = rootView.findViewById(R.id.btn_sm_status);
-        btnStatus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String status = ((Button) v).getText().toString();
-                if (STATUS_ADD.equals(status)) {
-                    ((Button) v).setText(STATUS_CHANGE);
-                } else if (STATUS_CHANGE.equals(status)) {
-                    ((Button) v).setText(STATUS_ADD);
-                }
-            }
-        });
-
-        Button btnDelete = rootView.findViewById(R.id.btn_sm_kv_delete);
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTreeView().removeNode(node);
-            }
-        });
-
         return rootView;
     }
 
