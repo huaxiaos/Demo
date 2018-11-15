@@ -43,6 +43,17 @@ public class KeyValueViewHolder extends BaseViewHolder {
             }
         });
 
+        Button btnDelete = rootView.findViewById(R.id.btn_sm_kv_delete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (node.getParent().getChildren().size() <= 1) {
+                    return;
+                }
+                getTreeView().removeNode(node);
+            }
+        });
+
         return rootView;
     }
 
