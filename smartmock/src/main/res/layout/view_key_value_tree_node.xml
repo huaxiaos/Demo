@@ -1,29 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="48dp">
+    android:minHeight="48dp"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_sm_kv_action"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="action" />
-
-    <EditText
-        android:id="@+id/et_sm_response_key"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/btn_sm_kv_action"
-        android:hint="key"
-        android:minWidth="100dp" />
-
-    <EditText
-        android:id="@+id/et_sm_response_value"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/et_sm_response_key"
-        android:hint="value"
-        android:minWidth="100dp" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_sm_kv_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="action" />
+
+        <EditText
+            android:id="@+id/et_sm_response_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="key"
+            android:minWidth="100dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_sm_kv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="delete" />
+
+        <EditText
+            android:id="@+id/et_sm_response_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="value"
+            android:minWidth="100dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

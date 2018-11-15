@@ -16,8 +16,8 @@ import com.huaxiao.smartmock.view.ActionView;
  */
 public class KeyValueViewHolder extends BaseViewHolder {
 
-    private static final String STATUS_CHANGE = "change";
-    private static final String STATUS_ADD = "add";
+    public static final String ACTION_CHANGE = "Change";
+    public static final String ACTION_INSERT = "Insert";
 
     public KeyValueViewHolder(Context context) {
         super(context);
@@ -28,33 +28,22 @@ public class KeyValueViewHolder extends BaseViewHolder {
         View rootView = LayoutInflater.from(context).inflate(R.layout.view_key_value_tree_node, null);
 
         Button btnAction = rootView.findViewById(R.id.btn_sm_kv_action);
+        btnAction.setText(ACTION_CHANGE);
         btnAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mActionView.show();
+                String text = ((Button) v).getText().toString();
+                if (ACTION_CHANGE.equals(text)) {
+                    ((Button) v).setText(ACTION_INSERT);
+                    mView.setBackgroundColor(Color.BLUE);
+                } else if (ACTION_INSERT.equals(text)) {
+                    ((Button) v).setText(ACTION_CHANGE);
+                    mView.setBackgroundColor(Color.TRANSPARENT);
+                }
             }
         });
 
         return rootView;
     }
 
-    @Override
-    public void onNodeViewCreate(View nodeView) {
-        super.onNodeViewCreate(nodeView);
-        mActionView.showActions(ActionView.ID_STATUS);
-    }
-
-    @Override
-    public void onActionViewItemClick(MenuItem item) {
-        super.onActionViewItemClick(item);
-        if (item.getItemId() == ActionView.ID_STATUS) {
-            if (ActionView.TITLE_CHANGE.equals(item.getTitle().toString())) {
-                item.setTitle(ActionView.TITLE_CREATE);
-                mView.setBackgroundColor(Color.TRANSPARENT);
-            } else if (ActionView.TITLE_CREATE.equals(item.getTitle().toString())) {
-                item.setTitle(ActionView.TITLE_CHANGE);
-                mView.setBackgroundColor(Color.BLUE);
-            }
-        }
-    }
 }

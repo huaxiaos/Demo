@@ -14,8 +14,6 @@ public class ActionView extends PopupMenu {
     public static final int ID_MAPLOCAL = R.id.menu_sm_action_maplocal;
     public static final int ID_STATUS = R.id.menu_sm_action_status;
     public static final int ID_DELETE = R.id.menu_sm_action_delete;
-    public static final String TITLE_CHANGE = "Change";
-    public static final String TITLE_CREATE = "Create";
 
     public ActionView(Context context, View anchor) {
         super(context, anchor);
@@ -34,7 +32,6 @@ public class ActionView extends PopupMenu {
 
     private void init() {
         getMenuInflater().inflate(R.menu.menu_sm_action, getMenu());
-        getMenu().findItem(ID_STATUS).setTitle(TITLE_CREATE);
     }
 
     public void showActions(int... ids) {
