@@ -1,7 +1,9 @@
 package com.huaxiao.smartmock.holder;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -39,7 +41,20 @@ public class KeyValueViewHolder extends BaseViewHolder {
     @Override
     public void onNodeViewCreate(View nodeView) {
         super.onNodeViewCreate(nodeView);
-        mActionView.showActions(ActionView.ID_CHANGE, ActionView.ID_CREATE);
+        mActionView.showActions(ActionView.ID_STATUS);
     }
 
+    @Override
+    public void onActionViewItemClick(MenuItem item) {
+        super.onActionViewItemClick(item);
+        if (item.getItemId() == ActionView.ID_STATUS) {
+            if (ActionView.TITLE_CHANGE.equals(item.getTitle().toString())) {
+                item.setTitle(ActionView.TITLE_CREATE);
+                mView.setBackgroundColor(Color.TRANSPARENT);
+            } else if (ActionView.TITLE_CREATE.equals(item.getTitle().toString())) {
+                item.setTitle(ActionView.TITLE_CHANGE);
+                mView.setBackgroundColor(Color.BLUE);
+            }
+        }
+    }
 }

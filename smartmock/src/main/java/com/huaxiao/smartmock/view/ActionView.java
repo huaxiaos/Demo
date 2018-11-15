@@ -11,32 +11,30 @@ import com.huaxiao.smartmock.R;
  */
 public class ActionView extends PopupMenu {
 
-    private Context mContext;
     public static final int ID_MAPLOCAL = R.id.menu_sm_action_maplocal;
-    public static final int ID_CHANGE = R.id.menu_sm_action_change;
-    public static final int ID_CREATE = R.id.menu_sm_action_create;
+    public static final int ID_STATUS = R.id.menu_sm_action_status;
     public static final int ID_DELETE = R.id.menu_sm_action_delete;
+    public static final String TITLE_CHANGE = "Change";
+    public static final String TITLE_CREATE = "Create";
 
     public ActionView(Context context, View anchor) {
         super(context, anchor);
-        mContext = context;
         init();
     }
 
     public ActionView(Context context, View anchor, int gravity) {
         super(context, anchor, gravity);
-        mContext = context;
         init();
     }
 
     public ActionView(Context context, View anchor, int gravity, int popupStyleAttr, int popupStyleRes) {
         super(context, anchor, gravity, popupStyleAttr, popupStyleRes);
-        mContext = context;
         init();
     }
 
     private void init() {
         getMenuInflater().inflate(R.menu.menu_sm_action, getMenu());
+        getMenu().findItem(ID_STATUS).setTitle(TITLE_CREATE);
     }
 
     public void showActions(int... ids) {

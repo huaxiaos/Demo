@@ -7,14 +7,9 @@
         android:title="MapLocal"/>
 
     <item
-        android:id="@+id/menu_sm_action_change"
+        android:id="@+id/menu_sm_action_status"
         android:visible="false"
         android:title="Change"/>
-
-    <item
-        android:id="@+id/menu_sm_action_create"
-        android:visible="false"
-        android:title="Create"/>
 
     <item
         android:id="@+id/menu_sm_action_delete"
