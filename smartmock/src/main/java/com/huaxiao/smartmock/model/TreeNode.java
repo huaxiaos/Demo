@@ -235,11 +235,16 @@ public class TreeNode {
                 return mView;
             }
             final View nodeView = getNodeView();
+            onNodeViewCreate(nodeView);
             final TreeNodeWrapperView nodeWrapperView = new TreeNodeWrapperView(nodeView.getContext(), getContainerStyle());
             nodeWrapperView.insertNodeView(nodeView);
             mView = nodeWrapperView;
 
             return mView;
+        }
+
+        public void onNodeViewCreate(View nodeView) {
+
         }
 
         public void setTreeViev(AndroidTreeView treeViev) {

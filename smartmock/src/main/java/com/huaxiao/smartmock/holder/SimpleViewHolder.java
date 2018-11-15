@@ -10,7 +10,7 @@ import com.huaxiao.smartmock.model.TreeNode;
 /**
  * Created by Bogdan Melnychuk on 2/11/15.
  */
-public class SimpleViewHolder extends TreeNode.BaseNodeViewHolder<Object> {
+public class SimpleViewHolder extends BaseViewHolder {
 
     public SimpleViewHolder(Context context) {
         super(context);

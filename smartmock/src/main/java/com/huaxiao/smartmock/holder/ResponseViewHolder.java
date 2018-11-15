@@ -12,7 +12,7 @@ import com.huaxiao.smartmock.model.TreeNode;
 /**
  * Created by sunhuaxiao on 2018/11/12.
  */
-public class ResponseViewHolder extends TreeNode.BaseNodeViewHolder<Object> {
+public class ResponseViewHolder extends BaseViewHolder {
 
     public ResponseViewHolder(Context context) {
         super(context);
