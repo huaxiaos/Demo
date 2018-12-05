@@ -1,14 +1,11 @@
 package com.huaxiao.demo;
 
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.demo.base.BaseActivity;
-import com.huaxiao.demo.exception.DemoException;
-import com.huaxiao.demo.fragment.FragmentDemoActivity;
 import com.huaxiao.demo.spi.SPIDemo;
 import com.huaxiao.smartmock.SmartMockActivity;
 
