@@ -6,8 +6,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.demo.base.BaseActivity;
-import com.huaxiao.demo.spi.SPIDemo;
-import com.huaxiao.smartmock.SmartMockActivity;
+import com.huaxiao.demo.fragment.FragmentHelper;
+import com.huaxiao.demo.mvp.demo1.impl.MVPDemo1Activity;
+import com.huaxiao.demo.mvp.demo1.impl.MVPDemo1Fragment;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -15,7 +16,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button button = (Button) findViewById(R.id.button);
         Button button2 = (Button) findViewById(R.id.button2);
         button.setOnClickListener(this);
@@ -37,7 +37,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //                        "service name"));
 //                startService(intent);
 
-                startActivity(new Intent(this, SmartMockActivity.class));
+                startActivity(new Intent(this, MVPDemo1Activity.class));
 
                 break;
 
@@ -46,7 +46,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 //                intent.setAction("com.huaxiao.demo.test");
 //                sendBroadcast(intent);
 
-                SPIDemo.run();
+//                SPIDemo.run();
+
+                MVPDemo1Fragment fragment = new MVPDemo1Fragment();
+                FragmentHelper.addFragment(fragment, getSupportFragmentManager(), R.id.fragment_container);
 
                 break;
 
@@ -54,4 +57,5 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
         }
     }
+
 }

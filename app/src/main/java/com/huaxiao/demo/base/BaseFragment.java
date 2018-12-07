@@ -1,6 +1,6 @@
 package com.huaxiao.demo.base;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by sunhuaxiao on 2018/12/6.
