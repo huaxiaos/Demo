@@ -64,7 +64,7 @@
         </receiver>
 
         <service
-            android:name=".service.DemoService"
+            android:name=".service.RemoteProcess"
             android:exported="true"
             android:process=":remote" />
 
