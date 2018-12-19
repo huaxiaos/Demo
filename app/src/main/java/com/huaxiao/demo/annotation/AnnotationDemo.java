@@ -54,6 +54,8 @@ public class AnnotationDemo {
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         }
+
+        enum2Annotation(Enum2AnnotationDemo.KEY_1);
     }
 
     @BindGet
@@ -61,4 +63,7 @@ public class AnnotationDemo {
         LogUtils.i(TAG, "get() " + param);
     }
 
+    public void enum2Annotation(@Enum2AnnotationDemo String value) {
+        LogUtils.i(TAG, "enum2Annotation value " + value);
+    }
 }
