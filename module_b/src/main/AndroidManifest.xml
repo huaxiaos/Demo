@@ -1,2 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.huaxiao.module_b" />
+    package="com.huaxiao.module_b">
+
+    <application>
+        <activity android:name=".ModuleBMainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="b"
+                    android:scheme="huaxiao" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

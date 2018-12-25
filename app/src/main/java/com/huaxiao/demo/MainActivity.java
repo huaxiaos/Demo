@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.service.RemoteProcess;
+import com.huaxiao.module_a.ModuleAMainActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -26,6 +27,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
+                startActivity(new Intent(this, ModuleAMainActivity.class));
                 break;
 
             case R.id.button2:
