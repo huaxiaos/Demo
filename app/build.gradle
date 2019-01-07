@@ -37,7 +37,7 @@ dependencies {
 //    testCompile 'junit:junit:4.12'
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'io.haydar.filescanner:filescannercore:1.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.alibaba:fastjson:1.2.41'
     implementation 'com.github.bumptech.glide:glide:4.0.0'
     //    compile 'com.airbnb.android:lottie:2.3.2-SNAPSHOT'
@@ -63,4 +63,7 @@ dependencies {
     implementation 'com.tencent.wup:wup:1.0.0.E-release'
     //mid包
     implementation 'com.tencent.mid:mid:4.0.7'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
 }

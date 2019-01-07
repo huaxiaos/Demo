@@ -34,7 +34,7 @@ public class OkHttpHelper {
 
     public static OkHttpClient getInstance() {
         if (mClient == null) {
-            synchronized (HttpUtils.class) {
+            synchronized (OkHttpHelper.class) {
                 if (mClient == null)
                     mClient = new OkHttpClient();
             }

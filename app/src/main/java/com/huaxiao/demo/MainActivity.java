@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.demo.base.BaseActivity;
+import com.huaxiao.demo.retrofit.RetrofitManager;
 import com.huaxiao.demo.service.RemoteProcess;
 import com.huaxiao.module_a.ModuleAMainActivity;
 
@@ -27,7 +28,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                startActivity(new Intent(this, ModuleAMainActivity.class));
+//                startActivity(new Intent(this, ModuleAMainActivity.class));
+                RetrofitManager.getInstance().test();
                 break;
 
             case R.id.button2:
