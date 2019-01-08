@@ -1,9 +1,9 @@
-package com.huaxiao.demo.httpv2;
+package com.huaxiao.demo.httpv2.biz;
 
 /**
  * Created by sunhuaxiao on 2019/1/7.
  */
-public class V2EXBean {
+public class BizBean {
 
     public String avatar_large;
     public String name;

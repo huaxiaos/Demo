@@ -1,4 +1,4 @@
-package com.huaxiao.demo.httpv2;
+package com.huaxiao.demo.httpv2.core;
 
 /**
  * Created by sunhuaxiao on 2019/1/8.
