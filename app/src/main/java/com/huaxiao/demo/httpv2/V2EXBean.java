@@ -1,4 +1,4 @@
-package com.huaxiao.demo.retrofit;
+package com.huaxiao.demo.httpv2;
 
 /**
  * Created by sunhuaxiao on 2019/1/7.
