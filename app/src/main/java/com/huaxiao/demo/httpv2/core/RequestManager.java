@@ -44,22 +44,4 @@ public class RequestManager {
         return retrofit.create(service);
     }
 
-    private <T> Callback<T> callback(final RequestListener<T> listener) {
-        return new Callback<T>() {
-            @Override
-            public void onResponse(Call<T> call, Response<T> response) {
-                if (listener != null) {
-                    listener.onResponse(response.body());
-                }
-            }
-
-            @Override
-            public void onFailure(Call<T> call, Throwable t) {
-                if (listener != null) {
-                    listener.onFailure(t);
-                }
-            }
-        };
-    }
-
 }

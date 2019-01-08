@@ -4,10 +4,6 @@ import com.huaxiao.demo.httpv2.core.BaseRequest;
 import com.huaxiao.demo.httpv2.core.RequestListener;
 import com.huaxiao.demo.httpv2.core.RequestManager;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 /**
  * Created by sunhuaxiao on 2019/1/8.
  */
@@ -22,7 +18,7 @@ public class BizRequest extends BaseRequest {
         if (mInstance == null) {
             synchronized (BizRequest.class) {
                 if (mInstance == null) {
-                    return mInstance;
+                    mInstance = new BizRequest();
                 }
             }
         }
@@ -36,6 +32,10 @@ public class BizRequest extends BaseRequest {
 
     public void getInfo(String name, final RequestListener<BizBean> listener) {
         mBizService.getNodeInfo(name).enqueue(callback(listener));
+    }
+
+    public void getInfoV2(String name, final RequestListener<BizBean> listener) {
+        mBizServiceV2.getNodeInfo(name).enqueue(callback(listener));
     }
 
 }
