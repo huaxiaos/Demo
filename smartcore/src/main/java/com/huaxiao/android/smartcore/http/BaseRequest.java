@@ -1,4 +1,4 @@
-package com.huaxiao.demo.httpv2.core;
+package com.huaxiao.android.smartcore.http;
 
 import retrofit2.Call;
 import retrofit2.Callback;

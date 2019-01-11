@@ -1,8 +1,8 @@
 package com.huaxiao.demo.httpv2.biz;
 
-import com.huaxiao.demo.httpv2.core.BaseRequest;
-import com.huaxiao.demo.httpv2.core.RequestListener;
-import com.huaxiao.demo.httpv2.core.RequestManager;
+import com.huaxiao.android.smartcore.http.BaseRequest;
+import com.huaxiao.android.smartcore.http.RequestListener;
+import com.huaxiao.android.smartcore.http.RequestManager;
 
 /**
  * Created by sunhuaxiao on 2019/1/8.

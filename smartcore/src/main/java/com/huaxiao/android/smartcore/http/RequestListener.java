@@ -1,4 +1,4 @@
-package com.huaxiao.demo.httpv2.core;
+package com.huaxiao.android.smartcore.http;
 
 /**
  * Created by sunhuaxiao on 2019/1/8.

@@ -1,4 +1,4 @@
-package com.huaxiao.demo.eventbus;
+package com.huaxiao.android.smartcore.eventbus;
 
 import org.greenrobot.eventbus.EventBus;
 

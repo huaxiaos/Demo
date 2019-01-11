@@ -1,6 +1,6 @@
 package com.huaxiao.demo.httpv2.biz;
 
-import com.huaxiao.demo.httpv2.core.RequestListener;
+import com.huaxiao.android.smartcore.http.RequestListener;
 import com.huaxiao.demo.utils.LogUtils;
 
 /**

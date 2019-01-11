@@ -7,8 +7,6 @@ import android.widget.Button;
 
 import com.huaxiao.demo.base.BaseActivity;
 import com.huaxiao.demo.httpv2.biz.BizDemo;
-import com.huaxiao.demo.httpv2.biz.BizRequest;
-import com.huaxiao.demo.httpv2.core.RequestManager;
 import com.huaxiao.demo.service.RemoteProcess;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {

@@ -1,4 +1,4 @@
-package com.huaxiao.demo.eventbus;
+package com.huaxiao.android.smartcore.eventbus;
 
 /**
  * Description 事件统一管理
