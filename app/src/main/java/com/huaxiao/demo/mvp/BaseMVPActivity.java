@@ -2,13 +2,9 @@ package com.huaxiao.demo.mvp;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
-import com.huaxiao.demo.base.BaseActivity;
-import com.huaxiao.demo.mvp.BasePresenter;
-import com.huaxiao.demo.mvp.IView;
+import com.huaxiao.android.smartcore.base.BaseActivity;
 
 /**
  * Description TODO

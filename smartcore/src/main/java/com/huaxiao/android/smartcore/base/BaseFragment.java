@@ -1,4 +1,5 @@
-package com.huaxiao.demo.base;
+package com.huaxiao.android.smartcore.base;
+
 
 import android.support.v4.app.Fragment;
 

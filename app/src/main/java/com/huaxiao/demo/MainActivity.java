@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.huaxiao.demo.base.BaseActivity;
+import com.huaxiao.android.smartcore.base.BaseActivity;
 import com.huaxiao.demo.httpv2.biz.BizDemo;
 import com.huaxiao.demo.service.RemoteProcess;
 

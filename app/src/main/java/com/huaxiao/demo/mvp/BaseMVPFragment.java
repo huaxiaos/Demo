@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.huaxiao.demo.base.BaseFragment;
+import com.huaxiao.android.smartcore.base.BaseFragment;
 
 /**
  * Created by sunhuaxiao on 2018/12/6.

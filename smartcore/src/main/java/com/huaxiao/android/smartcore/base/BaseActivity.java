@@ -1,4 +1,4 @@
-package com.huaxiao.demo.base;
+package com.huaxiao.android.smartcore.base;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
