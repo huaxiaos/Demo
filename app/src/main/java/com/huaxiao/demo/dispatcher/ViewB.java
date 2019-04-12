@@ -38,4 +38,10 @@ public class ViewB extends RelativeLayout {
 
         return false;
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.i("huaxiao", "ViewB onTouchEvent " + event.getAction());
+        return super.onTouchEvent(event);
+    }
 }
