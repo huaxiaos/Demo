@@ -23,6 +23,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".dispatcher.DispatcherActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,7 +70,7 @@
             android:process=":remote" />
 
         <activity android:name=".fragment.FragmentDemoActivity" />
-        <activity android:name=".mvp.demo1.impl.MVPDemo1Activity"></activity>
+        <activity android:name=".mvp.demo1.impl.MVPDemo1Activity" />
     </application>
 
 </manifest>

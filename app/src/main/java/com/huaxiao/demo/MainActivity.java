@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.android.smartcore.base.BaseActivity;
+import com.huaxiao.demo.dispatcher.DispatcherActivity;
 import com.huaxiao.demo.httpv2.biz.BizDemo;
 import com.huaxiao.demo.service.RemoteProcess;
 
@@ -27,8 +28,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-//                startActivity(new Intent(this, ModuleAMainActivity.class));
-                BizDemo.start();
+                startActivity(new Intent(this, DispatcherActivity.class));
+//                BizDemo.start();
                 break;
 
             case R.id.button2:
