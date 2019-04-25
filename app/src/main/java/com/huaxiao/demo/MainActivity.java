@@ -9,6 +9,7 @@ import com.huaxiao.android.smartcore.base.BaseActivity;
 import com.huaxiao.demo.dispatcher.DispatcherActivity;
 import com.huaxiao.demo.httpv2.biz.BizDemo;
 import com.huaxiao.demo.service.RemoteProcess;
+import com.huaxiao.demo.wifi.WifiDemoActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -28,7 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-                startActivity(new Intent(this, DispatcherActivity.class));
+                startActivity(new Intent(this, WifiDemoActivity.class));
 //                BizDemo.start();
                 break;
 
