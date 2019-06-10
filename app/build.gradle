@@ -16,7 +16,21 @@ android {
                 XG_ACCESS_ID : "2100314530",
                 XG_ACCESS_KEY: "AB44AE5T71EH",
         ]
+
+        ndk {
+            // Specifies the ABI configurations of your native
+            // libraries Gradle should build and package with your APK.
+            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a',
+                    'arm64-v8a'
+        }
     }
+
+    externalNativeBuild {
+        cmake {
+            path file('CMakeLists.txt')
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
