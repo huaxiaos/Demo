@@ -6,12 +6,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.huaxiao.android.smartcore.base.BaseActivity;
-import com.huaxiao.demo.dispatcher.DispatcherActivity;
-import com.huaxiao.demo.httpv2.biz.BizDemo;
 import com.huaxiao.demo.jni.NDKTools;
 import com.huaxiao.demo.service.RemoteProcess;
 import com.huaxiao.demo.utils.LogUtils;
-import com.huaxiao.demo.wifi.WifiDemoActivity;
+import com.huaxiao.demo.widget.WidgetActivity;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -31,12 +29,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.button:
-//                startActivity(new Intent(this, WifiDemoActivity.class));
-//                BizDemo.start();
-
-//                NDKTools.getStringFromNDK();
-
-                LogUtils.i(NDKTools.getStringFromNDK());
+                startActivity(new Intent(this, WidgetActivity.class));
 
                 break;
 
