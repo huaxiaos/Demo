@@ -22,7 +22,6 @@
         app:trp_max="100"
         app:trp_numSize="22sp"
         app:trp_roundWidth="6dip"
-        app:trp_startAngle="0"
         app:trp_text="90"
         app:trp_textSize="15sp" />
 

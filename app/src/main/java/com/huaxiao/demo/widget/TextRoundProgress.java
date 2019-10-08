@@ -57,7 +57,7 @@ public class TextRoundProgress extends View {
         textSize = mTypedArray.getDimension(R.styleable.TextRoundProgress_trp_textSize, 11);
         numSize = mTypedArray.getDimension(R.styleable.TextRoundProgress_trp_numSize, 14);
         max = mTypedArray.getInteger(R.styleable.TextRoundProgress_trp_max, 100);
-        startAngle = mTypedArray.getInt(R.styleable.TextRoundProgress_trp_startAngle, 90);
+        startAngle = mTypedArray.getInt(R.styleable.TextRoundProgress_trp_startAngle, -90);
         textShow = mTypedArray.getBoolean(R.styleable.TextRoundProgress_trp_textShow, true);
         useCustomFont = mTypedArray.getBoolean(R.styleable.TextRoundProgress_trp_userCustomFont, false);
         mTypedArray.recycle();

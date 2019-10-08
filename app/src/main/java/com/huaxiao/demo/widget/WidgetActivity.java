@@ -31,5 +31,8 @@ public class WidgetActivity extends AppCompatActivity {
                 progressBar.setProgress(0);
             }
         });
+
+        TextRoundProgress textRoundProgress = findViewById(R.id.trp_0);
+        textRoundProgress.setProgress(90);
     }
 }
